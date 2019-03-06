@@ -21,7 +21,19 @@ JnJ’s Clockwork is an android based alarm mobile application where users are a
 
 ## Power Up
 ### 1.2″ 4-Digit 7-Segment display
-
+For this sensor we want to be able to display the current time. With that python would need to be installed.
+```
+sudo apt-get update
+sudo apt-get install build-essential python-dev
+```
+You would also need python smbus and python-imaging library.
+```
+sudo apt-get install python-smbus python-imaging
+```
+This is the last library you need to install.
+```
+sudo python setup.py install
+```
 ## Database Design
 The database connection is established and connected to the mobile application. Reading and writing from the sensor to the database are also required. The database utilizes user-authentication to allow maximum security and protection for the users information. In order to read and write temperature, the user must be registered using a username and password through authentication processing. Offline mode allows access to the app, without the need to register and login. Offline mode skips user-authentication, and moves the user to the actual app. In offline mode, there will be no form of communications to the database.  Therefore the user is unable to read/write temperature to the database. 
 
