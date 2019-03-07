@@ -20,6 +20,33 @@ JnJ’s Clockwork is an android based alarm mobile application where users are a
 ## PCB Soldering
 
 ## Power Up
+### HTU21D-F Temperature/Humidity Sensor
+With the code provided in this repository, this test code should get your sensor to read and write temperature/humidity.
+
+Firstly though assuming you installed circuit python, all that is required is to run the command line to install HTU21D libraries.
+```
+sudo pip3 install adafruit-circuitpython-htu21d
+```
+You can copy this code and run it.
+
+```import time
+import board
+import busio
+from adafruit_htu21d import HTU21D
+ 
+# Create library object using our Bus I2C port
+i2c = busio.I2C(board.SCL, board.SDA)
+sensor = HTU21D(i2c)
+ 
+ 
+while True:
+    print("\nTemperature: %0.1f C" % sensor.temperature)
+    print("Humidity: %0.1f %%" % sensor.relative_humidity)
+    time.sleep(2)
+```
+
+Finally all that is needed is to run htu21d_simplestest.py
+
 ### 1.2″ 4-Digit 7-Segment display
 For this sensor we want to be able to display the current time. With that python and its librarys need to be installed:
 ```
