@@ -45,7 +45,8 @@ while True:
     time.sleep(2)
 ```
 
-Finally all that is needed is to run htu21d_simplestest.py
+Your output should look like this.
+
 
 ### 1.2″ 4-Digit 7-Segment display
 For this sensor we want to be able to display the current time. With that python and its librarys need to be installed:
